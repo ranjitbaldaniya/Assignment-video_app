@@ -26,7 +26,6 @@ const VideoAppLayout = () => {
   const recorderRef = useRef(null);
 
   const handlePlayerError = (error) => {
-    // console.error("Error loading the video:", error);
     setError("Error loading the video. Please try again.");
     setIsLoading(false);
     if (webcamRef.current) {
@@ -60,7 +59,6 @@ const VideoAppLayout = () => {
   };
 
   const handleWebcamError = (error) => {
-    console.error("Error starting webcam:", error);
     setWebcamReady(false);
   };
 

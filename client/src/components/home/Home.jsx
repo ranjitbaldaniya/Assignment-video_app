@@ -3,7 +3,6 @@ import { AuthContext } from "../../utils/AuthContect";
 
 const Home = () => {
   const { isAuthenticated } = useContext(AuthContext);
-  // console.log("isauthenticated", isAuthenticated);
   const userName =  localStorage.getItem("username") 
   return (
     <div>

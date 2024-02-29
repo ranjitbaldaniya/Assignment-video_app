@@ -36,7 +36,6 @@ const Login = () => {
         password,
       });
 
-      // console.log("res==>", response);
       if (response.status === 200) {
         localStorage.clear();
         localStorage.setItem("token", response.data.token);

@@ -21,7 +21,6 @@ const Register = () => {
     });
   };
 
-// console.log("formdata" , formData)
 
 
   const handleRegister = async () => {
@@ -39,7 +38,7 @@ const Register = () => {
       document.cookie = `token=${response.data.token}`;
       navigate('/login')
     } catch (error) {
-      console.error('Registration failed', error);
+      console.log("error" , error)
       setValidationError('Registration failed. Please try again.');
     }
   };

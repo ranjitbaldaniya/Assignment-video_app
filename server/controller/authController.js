@@ -4,12 +4,10 @@ import jwt from "jsonwebtoken";
 export const registerController = async (req, res) => {
   try {
 
-    // console.log("body", req.body);
     const { email, password } = req.body;
 
     //checking that email is alredy exist
     const user = await UserModel.findOne({ email });
-    // console.log("user", user);
 
     if (user) {
       // User already exists, send an error response
@@ -24,11 +22,9 @@ export const registerController = async (req, res) => {
 
     req.body.password = hashedPassword;
 
-    // console.log("hash body", req.body);
 
     const createUser = new UserModel(req.body);
     const savedUser = await createUser.save();
-    // console.log("savedUser", savedUser);
 
     res.status(200).json({ message: "Registration successful" });
   } catch (error) {
